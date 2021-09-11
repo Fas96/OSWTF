@@ -52,4 +52,4 @@ def arrayManipulationy(n, queries):
 
 
 if __name__ == '__main__':
-    print(minimumSwapsy([3, 7, 6, 9, 1, 8, 10, 4, 2, 5]))
+    print("ive got a lovely bunch of coconuts".split())
