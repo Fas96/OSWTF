@@ -8,18 +8,17 @@ def solution(n, b):
     return digits[::-1]
 
 
-if __name__ == '__main__':
+def go():
     usList = solution(437674, 3)
-
     print(usList)
+    zerolIS = []
     count = 0
+    LIS = []
     for i in range(1, len(usList) - 1):
-        if usList[i - 1] == 0 and usList[i + 1] == 0 and usList[i] != 0:
-            print(usList[i])
-        if usList[i]!=0 and usList[i+1]==0:
-            print(usList[i])
-        if usList[i]!=0 and usList[i-1]==0:
-            print(usList[i])
+        LIS = usList[:i + 1]
+        if usList[i - 1] == 0 and usList[i + 1] != 0 and usList[i] != 0:
+            count += 1
+        if usList[i - 1] != 0 and usList[i + 1] == 0 and usList[i] != 0:
+            count += 1
 
-
-
+    print(count)
