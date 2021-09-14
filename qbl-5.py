@@ -31,6 +31,7 @@ def divisibleSumPairs(n, k, ar):
     # print(mak)
 
 
+# migratoryBirds hacker rank
 def migratoryBirds(arr):
     arr = [1, 1, 4, 4, 5, 3]
     arr = sorted(arr)
