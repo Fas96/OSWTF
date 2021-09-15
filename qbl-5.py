@@ -59,7 +59,24 @@ def migratoryBirds(arr):
     return res
 
 
+def bonAppetit(bill, k, b):
+
+    k= 1
+    bill=[3 ,10, 2 ,9]
+    b=12
+    totalCost = 0
+    for i in range(len(bill)):
+        if i != k:
+            totalCost += bill[i]
+    # Write your code here
+    if totalCost/2==b:
+        print("Bon Appetit")
+    else:
+        print(int(b-(totalCost/2)))
+
+
 if __name__ == '__main__':
+    bonAppetit([],[],[])
     migratoryBirds([])
     divisibleSumPairs(2, 3, [])
     oddNumbers(3, 9)
