@@ -60,23 +60,42 @@ def migratoryBirds(arr):
 
 
 def bonAppetit(bill, k, b):
-
-    k= 1
-    bill=[3 ,10, 2 ,9]
-    b=12
+    k = 1
+    bill = [3, 10, 2, 9]
+    b = 12
     totalCost = 0
     for i in range(len(bill)):
         if i != k:
             totalCost += bill[i]
     # Write your code here
-    if totalCost/2==b:
+    if totalCost / 2 == b:
         print("Bon Appetit")
     else:
-        print(int(b-(totalCost/2)))
+        print(int(b - (totalCost / 2)))
+
+
+def birthday(s, d, m):
+    b = []
+    s = [1, 2, 1, 3, 2]
+    d = 3
+    m = 2
+
+    if len(s) == 1 and s[0] % m == 0:
+        b.append(s[0])
+    elif len(s) > 1:
+        for i in range(len(s)):
+            for j in range(i+1, len(s)):
+                print(s[i] ,s[j])
+                if s[i] + s[j] == d and (s[i] + s[j]) % m == 0:
+                    if [s[i], s[j]] not in b: b.append([s[i], s[j]])
+
+    print(len(b))
+    print("======")
 
 
 if __name__ == '__main__':
-    bonAppetit([],[],[])
+    birthday([], [], [])
+    bonAppetit([], [], [])
     migratoryBirds([])
     divisibleSumPairs(2, 3, [])
     oddNumbers(3, 9)
