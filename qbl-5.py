@@ -84,8 +84,8 @@ def birthday(s, d, m):
         b.append(s[0])
     elif len(s) > 1:
         for i in range(len(s)):
-            for j in range(i+1, len(s)):
-                print(s[i] ,s[j])
+            for j in range(i + 1, len(s)):
+                print(s[i], s[j])
                 if s[i] + s[j] == d and (s[i] + s[j]) % m == 0:
                     if [s[i], s[j]] not in b: b.append([s[i], s[j]])
 
@@ -93,7 +93,17 @@ def birthday(s, d, m):
     print("======")
 
 
+def hurdleRace(k, height):
+    # Write your code here
+    height = sorted(height, reverse=True)
+    if height[0] > k:
+        return height[0] - k
+    else:
+        return 0
+
+
 if __name__ == '__main__':
+    hurdleRace([], [])
     birthday([], [], [])
     bonAppetit([], [], [])
     migratoryBirds([])
